@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    font-family: Karla,sans-serif;
+    background-color: hsl(204, 43%, 93%);
+    border-radius: 10px;
+}
+.container{
+    max-width: 70vw;
+    width: 100%;
+    border-radius: 10px;
+    margin: 30px 0px;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+.header{
+    padding: 20px 30px;
+    background-color: hsla(0, 0%, 100%, 0.945);
+}
+.header h2{
+    font-size: 2.3rem;
+    color: hsl(179, 62%, 43%);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.header h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: hsl(71, 73%, 54%);
+    font-weight: bold;
+}
+.header p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.header h2,h3,p {
+    padding: 5px;
+}
+.combo{
+    border-radius: 10px;
+}
+.left-side{
+    padding: 30px;
+    background-color: hsla(179, 62%, 43%, 0.993);
+    color:white;
+}
+.left-side h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 0px;
+}
+.left-side p{
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+span{
+    font-size: 2.5rem;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+.bold{
+    font-weight: 550;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: white;
+}
+button{
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 20px 0px;
+    background-color:  hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 10px;
+}
+.right-side{
+    padding: 30px;
+    color: rgba(255, 255, 255, 0.801);
+    background-color:hsla(179, 62%, 43%, 0.801);
+
+}
+.right-side h3{
+    font-size: 1.5rem;
+    padding: 20px 0px;
+    font-weight: bold;
+    color: white;
+}
+.right-side ul{
+    list-style: none;
+}
+ul li{
+    text-decoration: none;
+    padding: 5px 0px;
+    font-weight: lighter;
+}
+/* adding media queries*/
+@media screen and (min-width:700px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Karla;
+        background-color: hsl(204, 43%, 93%);
+        border-radius: 10px;
+    }
+    .container{
+       width: 60vw;
+       display: grid;
+       height: 90vh;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows: repeat(2,1fr);
+       grid-template-areas: "one one"
+       "two three";
+       border-radius: 10px;
+       margin: 0;
+       box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
+       overflow: hidden;
+    }
+    .header{
+        grid-area: one;
+    }
+    .left-side{
+        grid-area: two;
+    }
+    .right-side{
+        grid-area: three;
+    }
+}
